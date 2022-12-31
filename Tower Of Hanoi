@@ -1,0 +1,22 @@
+//Tower Of Hanoi
+
+#include <iostream>
+
+using namespace std;
+
+void Hanoi(int n, char fromrod, char torod , char auxrod){
+    if(n==0)
+    return;
+    Hanoi(n-1,fromrod,auxrod,torod);
+    cout<<" Move disk "<<n<<" From rod "<<fromrod<<" to rod "<<torod<<endl;
+    Hanoi(n-1,auxrod,torod,fromrod);
+}
+
+int main()
+{
+    int n=0;
+    cout<<"Enter No. of disks\n";
+    cin>>n;
+    Hanoi(n, 'A', 'C' ,'B');
+    return 0;
+}
