@@ -1,0 +1,17 @@
+//Fiboacci Series Iterative
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout<<"enter term \n";
+    int a,i;
+    cin>>a;
+    int f[a+1];
+    f[0]=0;
+    f[1]=1;
+    for(i=2;i<=a;i++)
+    f[i]=f[i-1]+f[i-2];
+    cout<<"\n"<<f[a];
+
+    return 0;
+}
